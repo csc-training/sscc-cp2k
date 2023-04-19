@@ -1,0 +1,32 @@
+&GLOBAL
+  PROJECT farming                       ! Project name, gets prepended to all output files
+  PROGRAM FARMING                       ! Define farming-type job
+  RUN_TYPE NONE                         ! Farming master inputs should have RUN_TYPE NONE
+&END GLOBAL
+&FARMING
+  NGROUPS 8                             ! How many task groups to run simultaneously
+  &JOB                                  ! Input files for each subjob follows here
+    INPUT_FILE_NAME hybrid-1.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-2.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-3.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-4.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-5.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-6.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-7.inp
+  &END JOB
+  &JOB
+    INPUT_FILE_NAME hybrid-8.inp
+  &END JOB
+&END FARMING

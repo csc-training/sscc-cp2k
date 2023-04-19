@@ -1,0 +1,13 @@
+@SET WFN_NAME enol-neb-BAND1-RESTART.wfn
+@SET XYZ_NAME enol-neb-pos-Replica_nr_1-1.xyz
+
+&GLOBAL
+  PROJECT enol-hybrid-1                         ! Project name, gets prepended to all output files
+  RUN_TYPE TODO                                 ! Type of calculation
+  PRINT_LEVEL LOW                               ! Low verbosity
+&END GLOBAL
+
+&FORCE_EVAL                                     ! Include DFT and system settings
+  @include dft.inc
+  @include subsys.inc
+&END FORCE_EVAL
