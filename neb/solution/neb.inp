@@ -1,0 +1,39 @@
+@set WFN_NAME dummy
+@set XYZ_NAME enol-is.xyz
+
+&GLOBAL
+  PROJECT enol-neb                      ! Project name, gets prepended to all output files
+  RUN_TYPE BAND                         ! Type of calculation
+  PRINT_LEVEL LOW                       ! Low verbosity
+&END GLOBAL
+
+&FORCE_EVAL                             ! Include DFT and system settings
+  @include dft.inc
+  @include subsys.inc
+&END FORCE_EVAL
+
+&MOTION
+  &BAND
+    BAND_TYPE CI-NEB                    ! Climbing-image flavor of NEB
+    NUMBER_OF_REPLICA 8                 ! How many replicas to include
+    NPROC_REP 16                        ! How many compute cores to assign for each replica
+    &REPLICA                            ! Initial state filename
+      COORD_FILE_NAME enol-is.xyz
+    &END
+    &REPLICA                            ! Final state filename
+      COORD_FILE_NAME enol-fs.xyz
+    &END
+    &OPTIMIZE_BAND
+      OPTIMIZE_END_POINTS TRUE          ! Optimize also IS and FS
+      &DIIS
+        MAX_STEPS 20                    ! In the interest of time, run only 20 iterations
+      &END DIIS
+    &END OPTIMIZE_BAND
+  &END BAND
+  &PRINT                                ! We don't need restarts in this case
+    &RESTART OFF
+    &END RESTART
+    &RESTART_HISTORY OFF
+    &END RESTART_HISTORY
+  &END PRINT
+&END MOTION
