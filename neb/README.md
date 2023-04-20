@@ -1,0 +1,1 @@
+# Part 1: Nudged elastic band (NEB) calculations at PBE level of theory
