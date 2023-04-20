@@ -2,7 +2,7 @@
 
 Due to self-interaction error and resulting electron overdelocalization, reaction
 barriers are underestimated by semilocal exchange–correlation functionals such as
-PBE. Hybrid functional that include a fraction of exact Hartree–Fock (HF) exchange
+PBE. Hybrid functionals that include a fraction of exact Hartree–Fock (HF) exchange
 can mitigate this. We will now re-converge the energies of the NEB images optimized
 at the PBE level using the hybrid PBE0 functional.
 

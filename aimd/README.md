@@ -5,9 +5,10 @@ as proton transfer. In *ab initio* molecular dynamics (AIMD) simulations the for
 are calculated at each time step from first principles instead of a parametrized
 empirical force field. Atoms are thus free to move however they please, making bond
 making and breaking possible. AIMD simulations are very heavy and can typically be
-run only for about ~100 ps. This makes observing spontaneous (unbiased) chemical
-reactions impossible. However, in the present case the proton transfer barrier
-is so low (about the size of the thermal energy) that we can see and sample it.
+run only for about ~100 ps. It is therefore typically not possible to observe
+chemical reactions without applying some external bias on the system. However,
+in the present case the proton transfer barrier is so low (about the size of the 
+thermal energy) that we can see and sample it.
 
 ## Task 4.1 – Solvating the enol system
 
@@ -36,8 +37,8 @@ is so low (about the size of the thermal energy) that we can see and sample it.
 
 1. Edit the input files and submit the job:
    * `RUN_TYPE` should be `MD`
-   * We'll simulate in the `NVT` ensemble, i.e. the number of particles, volume
-     and temperature are kept constant using a timestep of `0.5` femtoseconds
+   * We'll simulate in the `NVT` ensemble (number of particles, volume and
+     temperature are kept constant) using a timestep of `0.5` femtoseconds
    * PBE has a tendency to "overstructure" water (it is too ice-like). To mitigate
      this, we'll use an increased simulation temperature of `348.15` K
    * Now the system is periodic, so make sure the Poisson solver is set to
@@ -48,7 +49,7 @@ is so low (about the size of the thermal energy) that we can see and sample it.
    $ sbatch cp2k.sh
    ```
 
-2. You can monitor the temperature and potential energy with Gnuplot:
+1. You can monitor the temperature and potential energy with Gnuplot:
 
    ```bash
    $ module load gnuplot
@@ -72,7 +73,7 @@ is so low (about the size of the thermal energy) that we can see and sample it.
 3. Note that the water molecules have been removed from this trajectory in order
    to decrease the file size.
 4. Use the `energy.py` Python script to analyze the proton transfer energy profile:
-   * Have a look at the script if you want
+   * Have a look at the script, `less energy.py`
    * We define a _reaction coordinate_ to quantify the progression of the reaction
      as $q=d_\mathrm{O_a H}-d_\mathrm{O_b H}$ where $d_{ij}$ is the distance between
      atoms $i$ and $j$.
