@@ -49,9 +49,9 @@ the string continuous and images equidistant.
 
 1. Replace all occurrences of `TODO` in the input/include files based on that:
    * We will perform a run of type `BAND` with `8` replicas (images)
-   * We will use the PBE exchange–correlation functional
-   * The simulation cell is cubic with side length 15 Å2
-2. Hint: to find all `TODO`s, try `grep TODO *.in*`
+   * We will use the `PBE` exchange–correlation functional
+   * The simulation cell is cubic with side length 15 Å
+   * Hint: to find all `TODO`s, try `grep TODO *.in*`
 3. Once you've fixed the input files, have a look at the batch job script 
    (it's quite simple) and then submit the calculation with:
    
@@ -60,10 +60,10 @@ the string continuous and images equidistant.
    $ sbatch cp2k.sh
    ```
 
-4. In the batch script we request one Mahti nodes (128 cores), meaning that each
+4. In the batch script we request one Mahti node (128 cores), meaning that each
    of the 8 replicas will be processed using 16 CPU cores. We run 20 NEB iterations,
    so the calculation should only take about 10 minutes.
-5. A bunch of output files are produced
+5. A bunch of output files are produced:
    * `*.out` are various output files
    * `*.wfn` are wavefunction restart files
    * `*.xyz` are coordinate files
