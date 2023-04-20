@@ -1,8 +1,8 @@
 # CSC Spring School on Computational Chemistry – Intermediate-level hands-on
 
-This exercise explores proton transfer associated with the interconversion of
-the two enol forms of 2-formylcyclohexanone using DFT simulations. The
-simulations are done using the [CP2K](https://www.cp2k.org/) software package
+This exercise explores the proton transfer step associated with the interconversion
+of the two enol forms of 2-formylcyclohexanone using DFT simulations. The
+calculations are done using the [CP2K](https://www.cp2k.org/) software package
 and visualization/analyses with [ASE](https://wiki.fysik.dtu.dk/ase/index.html)
 and [Gnuplot](http://www.gnuplot.info/).
 
@@ -18,8 +18,8 @@ This exercise consists of the following parts:
 
 ## Part 0: Preparations
 
-This exercise is run on Mahti. Login and clone this repository to a suitable
-directory under `/scratch`:
+This exercise is run on the Mahti supercomputer. Login and clone this repository
+to a suitable directory under `/scratch`:
 
 ```bash
 $ ssh -X <username>@mahti.csc.fi
