@@ -76,7 +76,7 @@ is so low (about the size of the thermal energy) that we can see and sample it.
      atoms $i$ and $j$.
    * The free energy is then
 
-     $$\Delta A=-k_\mathrm{B}T\ln P(q=$$
+     $$\Delta A=-k_\mathrm{B}T\ln P(q)$$
 
      where $P(q)$ is the probability density of $q$.
 
