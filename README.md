@@ -1,4 +1,4 @@
-# CSC Spring School on Computational Chemistry – Intermediate-level hands-on
+# CSC Spring School on Computational Chemistry – Intermediate-level quantum chemistry hands-on
 
 This exercise explores the proton transfer step associated with the interconversion
 of the two enol forms of 2-formylcyclohexanone using DFT simulations. The
