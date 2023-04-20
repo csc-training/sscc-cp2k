@@ -27,7 +27,7 @@ at the PBE level using the hybrid PBE0 functional.
    * The input files `hybrid-*.inp` for each image are now specified in the master
      `farming.inp` input. We again request one Mahti node so each image will be
      allocated 16 cores.
-3. Submit the job as usual with `sbatch cp2k.sh`
+3. Submit the job as usual with `sbatch cp2k.sh`.
 
 ## Task 3.2 – Analysis
 
@@ -50,4 +50,4 @@ at the PBE level using the hybrid PBE0 functional.
 4. NMR results suggest that there should be a 76%–24% split between the enol
    forms. Does your results agree with this?
 
-**Continue the hands-on with [Part 4](../aimd/README.md).**
+**Finish the hands-on with [Part 4](../aimd/README.md).**
