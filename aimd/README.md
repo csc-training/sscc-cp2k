@@ -1,4 +1,4 @@
-s# Part 4: *Ab initio* molecular dynamics simulation of 2-formylcyclohexanone in aqueous solution
+# Part 4: *Ab initio* molecular dynamics simulation of 2-formylcyclohexanone in aqueous solution
 
 Standard classical MD simulations are unable to describe chemical reactions such
 as proton transfer. In *ab initio* molecular dynamics (AIMD) simulations the forces
