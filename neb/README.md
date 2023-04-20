@@ -41,8 +41,8 @@ the string continuous and images equidistant.
    ```
 
 5. The main input file `neb.inp` contains the high-level `&GLOBAL`, `&FORCE_EVAL`
-   and `&MOTION` sections. The subsections `&DFT` and `&SUBSYS` and specified in
-   the files `dft.inc` and `subsys.inc` an included under the `&FORCE_EVAL` section
+   and `&MOTION` sections. The subsections `&DFT` and `&SUBSYS` are specified in
+   the files `dft.inc` and `subsys.inc` and included under the `&FORCE_EVAL` section
    using the `$INCLUDE` syntax.
 
 ## Task 1.2 – Fixing the input files and submitting the calculation
