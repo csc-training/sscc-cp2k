@@ -6,10 +6,13 @@ path and a minimum in all other directions. This means that a vibrational analys
 of the TS should yield exactly one imaginary vibrational mode. This technique is
 frequently used to verify that a TS was really found.
 
-## Task 2.1: 
+## Task 2.1 – Fixing the input files and submitting the calculation
 
 1. Move to the `sscc-qc-inter/vib/` directory, copy the TS structure and
    wave function restart there and edit the input files (replace `TODO`):
+   * Fix coordinate and wavefunction restart filenames
+   * The initial density guess (`SCF_GUESS`) is made based on `RESTART`
+   * `RUN_TYPE` should be `VIBRATIONAL_ANALYSIS`
 
    ```bash
    $ cd ../vib
@@ -27,5 +30,6 @@ frequently used to verify that a TS was really found.
 
 3. Is there only one imaginary (negative) frequency? How many vibrational modes
    are there in total? Why?
+   * Hint: Think about degrees of freedom
 
 **Continue the hands-on with [Part 3](../hybrid/README.md).**
