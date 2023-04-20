@@ -1,12 +1,12 @@
-# Part 1: Nudged elastic band (NEB) calculations at PBE level of theory
+# Part 1: Nudged elastic band calculations at PBE level of theory
 
-The nudged elastic band method is a technique for finding the minimum energy
+The nudged elastic band (NEB) method is a technique for finding the minimum energy
 path between two equilibrium structures. A discrete string of replicas (images)
-of the system that connect the initial (IS) and final states (FS) is created
-and optimized. A harmonic potential is included between each image in order to
-keep the string continuous and images equidistant.
+of the system that connect the initial (IS) and final states (FS) is created and
+optimized. A harmonic potential is included between each image in order to keep
+the string continuous and images equidistant.
 
-## Task 1 – The CP2K input structure
+## Task 1.1 – The CP2K input structure
 
 1. Navigate to the `./sscc-qc-inter/neb/` directory and inspect the files:
    
@@ -45,7 +45,7 @@ keep the string continuous and images equidistant.
    the files `dft.inc` and `subsys.inc` an included under the `&FORCE_EVAL` section
    using the `$INCLUDE` syntax.
 
-# Task 2 – Fixing the input files and submitting the calculation
+## Task 1.2 – Fixing the input files and submitting the calculation
 
 1. Replace all occurrences of `TODO` in the input/include files based on that:
    * We will perform a run of type `BAND` with `8` replicas (images)
@@ -69,7 +69,7 @@ keep the string continuous and images equidistant.
    * `*.xyz` are coordinate files
    * `*.ener` contains the energies for each image and NEB iteration
 
-# Task 3 – Analysis
+## Task 1.3 – Analysis
 
 1. Create and view a movie of the optimized minimum energy path:
    
@@ -93,4 +93,4 @@ keep the string continuous and images equidistant.
    energy?
    * Hint: The thermal energy at room temperature is about $k_\mathrm{B}T\approx25$ meV
 
-Continue the hands-on with [Part 2](../vib/README.md)
+**Continue the hands-on with [Part 2](../vib/README.md).**

@@ -28,4 +28,4 @@ $ cd /scratch/project_2006657/$USER
 $ git clone https://github.com/csc-training/sscc-qc-inter.git
 ```
 
-Start the hands-on with [Part 1](neb/README.md).
+**Start the hands-on with [Part 1](neb/README.md).**
