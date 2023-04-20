@@ -24,8 +24,8 @@ frequently used to verify that a TS was really found.
 2. Submit the job and, after a few minutes, inspect the produced `.mol` file:
 
    ```bash
-   sbatch cp2k.sh
-   less enol-vib-VIBRATIONS-1.mol
+   $ sbatch cp2k.sh
+   $ less enol-vib-VIBRATIONS-1.mol
    ```
 
 3. Is there only one imaginary (negative) frequency? How many vibrational modes

@@ -44,13 +44,15 @@ is so low (about the size of the thermal energy) that we can see and sample it.
      `PERIODIC`
 
    ```bash
-   grep TODO *.in*  # fix all matches
+   $ grep TODO *.in*  # fix all matches
+   $ sbatch cp2k.sh
    ```
 
-2. Submit the calculation as usual with `sbatch cp2k.sh`.
-3. You can monitor the temperature and potential energy with Gnuplot:
+2. You can monitor the temperature and potential energy with Gnuplot:
 
    ```bash
+   $ module load gnuplot
+   $ gnuplot
    gnuplot> plot "enol-aimd-1.ener" using 2:4 with linespoints
    gnuplot> plot "enol-aimd-1.ener" using 2:5 with linespoints
    ```
