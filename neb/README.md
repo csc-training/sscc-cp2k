@@ -32,18 +32,17 @@ the string continuous and images equidistant.
    and including files into the `.inp` input file, respectively. Study the input
    sections and keywords with the help of the CP2K input reference available
    [here](https://manual.cp2k.org).
-4. Visualize the `enol-is.xyz` and `enol-fs.xyz` geometries using ASE GUI, which
+4. The main input file `neb.inp` contains the high-level `&GLOBAL`, `&FORCE_EVAL`
+   and `&MOTION` sections. The subsections `&DFT` and `&SUBSYS` are specified in
+   the files `dft.inc` and `subsys.inc` and included under the `&FORCE_EVAL` section
+   using the `$INCLUDE` syntax.
+5. Visualize the `enol-is.xyz` and `enol-fs.xyz` geometries using ASE GUI, which
    is provided in the GPAW module:
 
    ```bash
    $ module load gpaw
    $ ase gui enol-*
    ```
-
-5. The main input file `neb.inp` contains the high-level `&GLOBAL`, `&FORCE_EVAL`
-   and `&MOTION` sections. The subsections `&DFT` and `&SUBSYS` are specified in
-   the files `dft.inc` and `subsys.inc` and included under the `&FORCE_EVAL` section
-   using the `$INCLUDE` syntax.
 
 ## Task 1.2 – Fixing the input files and submitting the calculation
 
