@@ -1,0 +1,1 @@
+# Part 3: Re-converging the NEB minimum energy profile using the PBE0 hybrid functional
