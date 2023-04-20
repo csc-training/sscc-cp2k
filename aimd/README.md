@@ -72,7 +72,7 @@ is so low (about the size of the thermal energy) that we can see and sample it.
 4. Use the `energy.py` Python script to analyze the proton transfer energy profile:
    * Have a look at the script if you want
    * We define a _reaction coordinate_ to quantify the progression of the reaction
-     as $q=d_{\mathrm{O}_a\mathrm{H}}-d_{\mathrm{O}_b\mathrm{H}}$ where $d_{ij}$ is the distance between
+     as $q=d_\mathrm{O_a H}-d_\mathrm{O_b H}$ where $d_{ij}$ is the distance between
      atoms $i$ and $j$.
    * The free energy is then
 
