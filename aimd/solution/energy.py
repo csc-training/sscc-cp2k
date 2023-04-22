@@ -23,23 +23,34 @@ def main():
         rc[i] = frame.get_distance(10, 14)-frame.get_distance(12,14)
 
     # Calculate probability density
-    hist, _ = np.histogram(rc, bins=50, range=(-1, 1), density=True)
+    b = 50
+    hist, _ = np.histogram(rc, bins=b, range=(-1, 1), density=True)
 
     # Compute free energy and shift minimum to zero
-    energy = -kT*np.log(hist)
-    energy = energy-np.amin(energy)
+    energy = -kT*np.log(hist/np.amax(hist))
+
+    # Assign x-axes
+    time = np.arange(len(rc))/2000
+    rxn = np.linspace(-1, 1, b)
 
     # Plot
-    fig, ax = plt.subplots(3, 1)
-    ax[0].plot(np.arange(len(rc))/2000, rc)
+    _, ax = plt.subplots(3, 1)
+    
+    # Time evolution of the reaction coordinate
+    ax[0].plot(time, rc)
     ax[0].set_xlabel('Time (ps)')
     ax[0].set_ylabel('Reaction coordinate (Å)')
-    ax[1].plot(hist)
+
+    # Probability density of the reaction coordinate
+    ax[1].plot(rxn, hist)
     ax[1].set_xlabel('Reaction coordinate (Å)')
     ax[1].set_ylabel('Probability density')
-    ax[2].plot(energy)
+    
+    # Helmholtz free energy profile
+    ax[2].plot(rxn, energy)
     ax[2].set_xlabel('Reaction coordinate (Å)')
     ax[2].set_ylabel('Free energy (meV)')
+    
     plt.show()
 
 if __name__ == '__main__':
