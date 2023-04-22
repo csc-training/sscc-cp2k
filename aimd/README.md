@@ -89,7 +89,7 @@ thermal energy) that we can see and sample it.
    ```
 
 5. What can you say about the free energy profile? Does the reaction free energy
-   and barrier differ from the static vacuum phase NEB results? Why (not)?
+   and barrier differ from the static vacuum phase NEB results? Why?
 
 ## Conclusions
 
