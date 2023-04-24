@@ -1,5 +1,6 @@
 #!/bin/bash -l
 #SBATCH --time=00:15:00
+#SBATCH --reservation=sscc_thu_med
 #SBATCH --partition=medium
 #SBATCH --ntasks-per-node=128
 #SBATCH --nodes=1
