@@ -1,6 +1,6 @@
 &GLOBAL
   PROJECT farming                       ! Project name, gets prepended to all output files
-  PROGRAM FARMING                       ! Define farming-type job
+  PROGRAM TODO                          ! Define farming-type job
   RUN_TYPE NONE                         ! Farming master inputs should have RUN_TYPE NONE
 &END GLOBAL
 &FARMING

@@ -85,6 +85,7 @@ thermal energy) that we can see and sample it.
      where $P(q)$ is the probability density of $q$.
 
    ```bash
+   $ module load mesa-settings
    $ python3 energy.py enol-aimd-nowater.xyz
    ```
 
