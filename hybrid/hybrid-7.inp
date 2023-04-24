@@ -3,7 +3,7 @@
 
 &GLOBAL
   PROJECT enol-hybrid-7                         ! Project name, gets prepended to all output files
-  RUN_TYPE TODO                                 ! Type of calculation
+  RUN_TYPE ENERGY                               ! Type of calculation
   PRINT_LEVEL LOW                               ! Low verbosity
 &END GLOBAL
 

@@ -30,7 +30,7 @@
   &XC
     &XC_FUNCTIONAL
       &PBE
-        SCALE_X 0.75                    ! Include 75% PBE exchange
+        SCALE_X TODO                    ! Include 75% PBE exchange
         SCALE_C 1.0                     ! Include 100% PBE correlation
       &END PBE
     &END XC_FUNCTIONAL

@@ -4,7 +4,7 @@
   RUN_TYPE NONE                         ! Farming master inputs should have RUN_TYPE NONE
 &END GLOBAL
 &FARMING
-  NGROUPS 8                             ! How many task groups to run simultaneously
+  NGROUPS TODO                          ! How many subjobs to run simultaneously
   &JOB                                  ! Input files for each subjob follows here
     INPUT_FILE_NAME hybrid-1.inp
   &END JOB
