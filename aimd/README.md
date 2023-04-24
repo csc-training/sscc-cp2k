@@ -76,7 +76,9 @@ thermal energy) that we can see and sample it.
    * Have a look at the script, `less energy.py`
    * We define a _reaction coordinate_ to quantify the progression of the reaction
      as $q=d_\mathrm{O_a H}-d_\mathrm{O_b H}$ where $d$ is a distance between
-     atoms $i$ and $j$. Specifically, $\mathrm{O_a}$ denotes the oxygen attached directly to the cyclohexane ring while $\mathrm{O_b}$ is the oxygen of the aldehyde side chain.
+     atoms $i$ and $j$. Specifically, $\mathrm{O_a}$ denotes the oxygen attached
+     directly to the cyclohexane ring while $\mathrm{O_b}$ is the oxygen of the
+     aldehyde side chain.
    * The free energy is then
 
      $$A(q)=-k_\mathrm{B}T\ln P(q)$$
