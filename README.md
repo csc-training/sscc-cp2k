@@ -28,8 +28,8 @@ $ cd /scratch/project_2006657/$USER
 $ git clone https://github.com/csc-training/sscc-qc-inter.git
 ```
 
-Some parts of this exercise will use different Python packages for visualization,
-anlysis and plotting. To use these, modify your path by running:
+Some parts of this exercise utilize Python packages for visualization, analysis
+and plotting. To use these, modify your path by running:
 
 ```bash
 $ export PATH="/projappl/project_2006657/sscc-2023-python/bin:$PATH"
