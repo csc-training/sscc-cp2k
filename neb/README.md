@@ -36,11 +36,9 @@ the string continuous and images equidistant.
    and `&MOTION` sections. The subsections `&DFT` and `&SUBSYS` are specified in
    the files `dft.inc` and `subsys.inc` and included under the `&FORCE_EVAL` section
    using the `$INCLUDE` syntax.
-5. Visualize the `enol-is.xyz` and `enol-fs.xyz` geometries using ASE GUI, which
-   is provided in the GPAW module:
+5. Visualize the `enol-is.xyz` and `enol-fs.xyz` geometries using ASE GUI:
 
    ```bash
-   $ module load gpaw
    $ ase gui enol-*
    ```
 
@@ -74,7 +72,6 @@ the string continuous and images equidistant.
    
    ```bash
    $ for i in {1..8} ; do tail -n 21 "enol-neb-pos-Replica_nr_${i}-1.xyz" >> movie.xyz ; done
-   $ module load gpaw
    $ ase gui movie.xyz
    ```
 

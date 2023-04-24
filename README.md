@@ -28,4 +28,11 @@ $ cd /scratch/project_2006657/$USER
 $ git clone https://github.com/csc-training/sscc-qc-inter.git
 ```
 
-**Start the hands-on with [Part 1](neb/README.md).**
+Some parts of this exercise will use different Python packages for visualization,
+anlysis and plotting. To use these, modify your path by running:
+
+```bash
+$ export PATH="/projappl/project_2006657/sscc-2023-python/bin:$PATH"
+```
+
+**Now, start the actual hands-on with [Part 1](neb/README.md).**
