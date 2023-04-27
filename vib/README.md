@@ -34,4 +34,11 @@ frequently used to verify that a TS was really found.
    are there in total? Why?
    * Hint: Think about degrees of freedom
 
+Extra: Visualise the vibrations with Molden:
+
+   ```bash
+   $ module load molden
+   $ molden enol-vib-VIBRATIONS-1.mol
+   ```
+
 **Continue the hands-on with [Part 3](../hybrid/README.md).**
