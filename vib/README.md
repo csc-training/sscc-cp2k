@@ -12,6 +12,8 @@ frequently used to verify that a TS was really found.
    wave function restart there and edit the input files (replace `TODO`):
    * Fix coordinate and wavefunction restart filenames
    * The initial density guess (`SCF_GUESS`) is made based on `RESTART`
+   * The wave-function file from earlier calculation (`WFN_NAME`) should be `enol-neb-BAND5-RESTART.wfn`
+   * Coordinates-file from earlier calculation (`XYZ_NAME`) should be `enol-neb-pos-Replica_nr_5-1.xyz`
    * `RUN_TYPE` should be `VIBRATIONAL_ANALYSIS`
 
    ```bash
