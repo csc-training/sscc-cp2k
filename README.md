@@ -1,5 +1,7 @@
 # CSC Spring School on Computational Chemistry – Intermediate quantum chemistry hands-on
 
+🚧 Work in progress! These exercises are being ported to Jupyter Notebooks. 🚧
+
 This exercise explores the proton transfer step associated with the interconversion
 of the two enol forms of 2-formylcyclohexanone using DFT simulations. The
 calculations are done using the [CP2K](https://www.cp2k.org/) software package
