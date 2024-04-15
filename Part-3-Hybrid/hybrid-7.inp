@@ -16,7 +16,7 @@
       POISSON_SOLVER WAVELET              ! Efficient solver for non-periodic system
     &END POISSON
     &SCF
-      SCF_GUESS RESTART                   ! Initial density guess is a simple superposition of atomic charge densities
+      SCF_GUESS RESTART                   ! How to guess initial electron density for SCF cycle
       EPS_SCF 1.0E-6                      ! Energy convergence criteria (atomic units)
       &OT                                 ! Use orbital transformation method instead of brute-force diagonalization
         ALGORITHM IRAC                    ! OT algorithm
