@@ -1,13 +1,71 @@
-@SET WFN_NAME enol-neb-BAND4-RESTART.wfn
-@SET XYZ_NAME enol-neb-pos-Replica_nr_4-1.xyz
-
 &GLOBAL
-  PROJECT enol-hybrid-4                         ! Project name, gets prepended to all output files
-  RUN_TYPE ENERGY                               ! Type of calculation
-  PRINT_LEVEL LOW                               ! Low verbosity
+  PROJECT enol-hybrid-4                   ! Project name, gets prepended to all output files
+  RUN_TYPE ENERGY                         ! Type of calculation
+  PRINT_LEVEL LOW                         ! Low verbosity
 &END GLOBAL
 
-&FORCE_EVAL                                     ! Include DFT and system settings
-  @include dft.inc
-  @include subsys.inc
+&FORCE_EVAL                               ! Include DFT and system settings
+  &DFT
+    RESTART_FILE_NAME enol-neb-BAND4-RESTART.wfn
+    BASIS_SET_FILE_NAME BASIS_MOLOPT
+    &QS
+      EPS_DEFAULT 1.0E-12                 ! Sets convergence criteria so that energy should be accurate up to this value
+    &END QS
+    &POISSON                              ! How to deal with electrostatics
+      PERIODIC NONE                       ! System is not periodic
+      POISSON_SOLVER WAVELET              ! Efficient solver for non-periodic system
+    &END POISSON
+    &SCF
+      SCF_GUESS RESTART                   ! Initial density guess is a simple superposition of atomic charge densities
+      EPS_SCF 1.0E-6                      ! Energy convergence criteria (atomic units)
+      &OT                                 ! Use orbital transformation method instead of brute-force diagonalization
+        ALGORITHM IRAC                    ! OT algorithm
+        MINIMIZER DIIS                    ! Minimization algorithm
+        PRECONDITIONER FULL_ALL           ! Preconditioner for the minimizer
+      &END OT
+      MAX_SCF 20                          ! Maximum number of SCF steps before rebuilding preconditioner
+      &OUTER_SCF ON
+        EPS_SCF 1.0E-6                    ! Outer loop energy convergence criteria (atomic units)
+        MAX_SCF 12                        ! Maximum number of preconditioner rebuilds before terminating
+      &END OUTER_SCF
+      &PRINT
+        &RESTART
+          BACKUP_COPIES 0                 ! Avoid excessive printing of restart files
+        &END RESTART
+      &END PRINT
+    &END SCF
+    &XC
+      &XC_FUNCTIONAL
+        &PBE
+          SCALE_X 0.75                    ! Include 75% PBE exchange
+          SCALE_C 1.0                     ! Include 100% PBE correlation
+        &END PBE
+      &END XC_FUNCTIONAL
+      &HF
+        FRACTION 0.25                     ! Include 25% HF exchange
+      &END HF
+    &END XC
+  &END DFT
+  &SUBSYS
+    &CELL
+      PERIODIC NONE                       ! System is not periodic
+      ABC 15.0 15.0 15.0                  ! Dimensions of the simulation cell in angstroms
+    &END CELL
+    &TOPOLOGY                             ! Specify input coordinate format and filename
+      COORD_FILE_FORMAT XYZ
+      COORD_FILE_NAME enol-neb-pos-Replica_nr_4-1.xyz
+    &END TOPOLOGY
+    &KIND H                               ! Basis sets and pseudopotential for hydrogen
+      BASIS_SET DZVP-MOLOPT-SR-GTH
+      POTENTIAL GTH-PBE-q1
+    &END KIND
+    &KIND C                               ! Basis sets and pseudopotential for carbon
+      BASIS_SET DZVP-MOLOPT-SR-GTH
+      POTENTIAL GTH-PBE-q4
+    &END KIND
+    &KIND O                               ! Basis sets and pseudopotential for oxygen
+      BASIS_SET DZVP-MOLOPT-SR-GTH
+      POTENTIAL GTH-PBE-q6
+    &END KIND
+  &END SUBSYS
 &END FORCE_EVAL
