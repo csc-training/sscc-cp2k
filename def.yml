@@ -1,0 +1,12 @@
+channels:
+ - conda-forge
+dependencies:
+ - gromacs
+ - openbabel
+ - numpy
+ - matplotlib
+ - ase
+ - py3dmol
+ - ipywidgets
+ - jupyterlab
+ - jupyterlab_widgets
