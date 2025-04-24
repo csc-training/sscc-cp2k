@@ -25,6 +25,6 @@ The notebooks are run using Puhti web interface, and they rely on CSC's
 2. Select *Jupyter for courses*
 3. Reservation: *sscc_thu_small* (applicable during the school)
 4. Project: *project_2013760*
-5. Course module: *sscc-2024-cp2k*
+5. Course module: *sscc-2025-cp2k*
 6. Partition: *small* (default resource settings)
 7. Launch!
