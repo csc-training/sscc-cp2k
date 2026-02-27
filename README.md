@@ -19,7 +19,7 @@ The hands-on consists of the following parts:
 ## How to run
 
 The notebooks are run using Mahti web interface, and they rely on CSC's
-`cp2k/2025.1` module and a [custom Python environment](def.yml).
+`cp2k/2025.1` module and a [custom Python environment](config/def.yml).
 
 1. Go to <https://www.mahti.csc.fi>
 2. Select *Jupyter for courses*
