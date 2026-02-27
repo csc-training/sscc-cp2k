@@ -18,13 +18,13 @@ The hands-on consists of the following parts:
 
 ## How to run
 
-The notebooks are run using Puhti web interface, and they rely on CSC's
-`cp2k/2024.1` module and a [custom Python environment](def.yml).
+The notebooks are run using Mahti web interface, and they rely on CSC's
+`cp2k/2025.1` module and a [custom Python environment](def.yml).
 
-1. Go to <https://www.puhti.csc.fi>
+1. Go to <https://www.mahti.csc.fi>
 2. Select *Jupyter for courses*
-3. Reservation: *sscc_thu_small* (applicable during the school)
-4. Project: *project_2013760*
-5. Course module: *sscc-2025-cp2k*
-6. Partition: *small* (default resource settings)
+3. Reservation: *sscc_thu_interactive* (applicable during the school)
+4. Project: *project_2017403*
+5. Course module: *sscc-2026-cp2k*
+6. Partition: *interactive* (default resource settings)
 7. Launch!
